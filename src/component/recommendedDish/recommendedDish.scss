@@ -1,0 +1,25 @@
+.recommend-dish{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+
+    .heading{
+        width: 100%;
+      
+      p{
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .r-listing{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}

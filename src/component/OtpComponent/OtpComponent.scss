@@ -1,0 +1,22 @@
+.otp-section{
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5px;
+    .otpinput{
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .otpinput:focus{
+        border-color: #c0262d; /* Blue border */
+        box-shadow: 0 0 5px #c0262e48; /* Blue glow effect */
+    }
+}

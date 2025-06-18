@@ -1,0 +1,99 @@
+.assistant{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    max-width: calc(100% - 20px) ;
+    min-width: 350px;
+    height: 180px;
+    z-index: 5000000;
+
+    .assistant-icon{
+        position: absolute;
+        right: 5px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: white;
+        padding: 5px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .pop-up-message{
+            position: absolute;
+            right: 10px;
+            bottom: 45px;
+            min-width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .chatBox{
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        position: absolute;
+        right: 60px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+  
+        .recent-chat{
+           height: 80%;
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           overflow-y: auto;
+           .message{
+            display: flex;
+            p{
+                width: fit-content;
+                border-radius: 10px;
+                padding: 5px;
+                background-color: #f3f3f7;
+                font-size: 0.8rem;
+                color: #575764;
+             }
+           }
+          
+           .user{
+                 text-align: right;
+                 justify-content: flex-end;
+           }
+           .bot{
+                text-align: left;
+                justify-content: flex-start;
+           }
+        }
+
+        .user-input{
+         height: 30%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 10px;
+         width: 100%;
+
+         
+        }
+
+    }
+}
+
+.recent-chat::-webkit-scrollbar{
+    width: 5px;
+}
