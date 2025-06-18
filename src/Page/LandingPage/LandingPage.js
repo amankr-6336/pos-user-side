@@ -17,7 +17,8 @@ function LandingPage() {
   const order = useSelector((state) => state.OrderReducer.order);
 
   useEffect(() => {
-    getTableInfo()
+    getTableInfo();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function getTableInfo() {

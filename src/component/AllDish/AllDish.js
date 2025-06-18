@@ -13,6 +13,7 @@ function AllDish() {
 
   useEffect(()=>{
      GetCategory();
+       // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useEffect(() => {

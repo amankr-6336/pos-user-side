@@ -1,11 +1,11 @@
 import React from "react";
 import './CartItem.scss'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { addToCart,removeFromCart } from "../../redux/Cart/CartReducer";
 
 function CartItem({ data }) {
   const dispatch=useDispatch()
-  const cart = useSelector((state) => state.CartReducer.cart);
+  // const cart = useSelector((state) => state.CartReducer.cart);
   
   console.log(data);
   return (

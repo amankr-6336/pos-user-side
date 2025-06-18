@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SingleMeneBox from "../SingleMenuBox/SingleMeneBox";
 import "./recommendedDish.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,8 +6,6 @@ import { axiosClient } from "../../utils/AxiosClient";
 import { useParams } from "react-router-dom";
 import { setRecommendedDish } from "../../redux/RecommendedDish/RecommendedDishReducer";
 import Loading from "../Loading/Loading";
-import useCachedApi from "../../hooks/useCachedApi";
-
 function RecommendedDish() {
   const [loading, setLoading] = useState(true);
   const param = useParams();
@@ -53,7 +51,7 @@ function RecommendedDish() {
     return () => {
       unmounted = true;
     };
-  }, [restroId]);
+  }, [restroId,dispatch]);
 
   const getCurrentLocation = async () => {
     return new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-import { configureStore,combineReducers } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 import CartReducer from './Cart/CartReducer';
 import OrderReducer from './order/OrderReducer'

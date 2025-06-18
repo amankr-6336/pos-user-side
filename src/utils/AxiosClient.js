@@ -9,7 +9,7 @@ const getGuestToken = () => {
   return guestToken;
 };
 
-let baseURL = "http://localhost:4001/";
+let baseURL ="https://api.restopia.shop/";
 
 export const axiosClient = axios.create({
   baseURL,

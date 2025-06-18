@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Header.scss";
-import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { BsCart4 } from "react-icons/bs";
 import Dialog from "../common/dialog/Dialog";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,6 +28,7 @@ function Header({ table }) {
   const cart = useSelector((state) => state.CartReducer.cart);
   const order = useSelector((state) => state.OrderReducer.order);
   console.log(order);
+  console.log(orderResponse);
 
   let totalAmount = 0;
   cart.forEach((item) => (totalAmount += item.quantity * item.price));

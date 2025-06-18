@@ -1,9 +1,7 @@
 import React from "react";
-import bg from "../../asset/fallback_dish_image_500x500.webp";
 import "./SingleMenuBox.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/Cart/CartReducer";
-import { IoIosAdd } from "react-icons/io";
 
 function SingleMeneBox({ data }) {
   const dispatch = useDispatch();

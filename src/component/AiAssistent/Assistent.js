@@ -1,7 +1,6 @@
 import React, { useState ,useEffect,useRef} from "react";
 import assistantIcon from "../../asset/chat.png";
 import "./Assistent.scss";
-import Input from "../common/input/Input";
 import { BiSolidSend } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
 import { axiosClient } from "../../utils/AxiosClient";
