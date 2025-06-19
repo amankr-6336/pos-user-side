@@ -10,15 +10,15 @@ import { useParams } from "react-router-dom";
 import { orderConfirmed } from "../../redux/order/OrderReducer";
 import { io } from "socket.io-client";
 import { resetCart } from "../../redux/Cart/CartReducer";
-import OtpComponent from "../OtpComponent/OtpComponent";
+// import OtpComponent from "../OtpComponent/OtpComponent";
 import { BiSolidBellRing } from "react-icons/bi";
 import  FallbackrestroLogo from '../../asset/optimized_restaurant_logo.png'
 
 function Header({ table }) {
-  const [otp, setOtp] = useState(null);
+  // const [otp, setOtp] = useState(null);
   const [cartDialog, setCartDialog] = useState(false);
   const [cartCheckout, setCartCheckout] = useState(false);
-  const [otpdialog, setotpdialog] = useState(false);
+  // const [otpdialog, setotpdialog] = useState(false);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("+91");
   const [orderResponse, setOrderResponse] = useState(null);
@@ -46,9 +46,9 @@ function Header({ table }) {
   function handleCloseCart() {
     setCartCheckout(false);
   }
-  function handlecloseOtpdialog() {
-    setotpdialog(false);
-  }
+  // function handlecloseOtpdialog() {
+  //   setotpdialog(false);
+  // }
   function handleProcedToCheckout() {
     setCartCheckout(true);
     setCartDialog(false);
@@ -90,7 +90,7 @@ function Header({ table }) {
     } finally {
       setCartDialog(false);
       setCartCheckout(false);
-      setotpdialog(false);
+      // setotpdialog(false);
       setName("");
       setNumber("+91");
       dispatch(resetCart());
@@ -98,20 +98,20 @@ function Header({ table }) {
   }
 
   // open Otp dialog
-  async function handleOtpsection() {
-    try {
-      const response = await axiosClient.post("/otp/send-otp", {
-        phone: number,
-      });
-      console.log(response);
-      if (response) {
-        setCartCheckout(false);
-        setotpdialog(true);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async function handleOtpsection() {
+  //   try {
+  //     const response = await axiosClient.post("/otp/send-otp", {
+  //       phone: number,
+  //     });
+  //     console.log(response);
+  //     if (response) {
+  //       setCartCheckout(false);
+  //       setotpdialog(true);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   async function confirmOrder() {
     try {
