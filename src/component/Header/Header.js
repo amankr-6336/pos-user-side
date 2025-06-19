@@ -55,7 +55,7 @@ function Header({ table }) {
   }
 
   useEffect(() => {
-    const socketInstance = io("http://localhost:4001"); // Replace with your server URL
+    const socketInstance = io("https://api.restopia.shop"); // Replace with your server URL
     setSocket(socketInstance);
 
     // Cleanup on unmount
@@ -115,14 +115,9 @@ function Header({ table }) {
 
   async function confirmOrder() {
     try {
-      const response = await axiosClient.post("/otp/verify-otp", {
-        phone: number,
-        otp: otp,
-      });
-
-      if (response) {
+      
         handleConfirmOrder();
-      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -209,7 +204,8 @@ function Header({ table }) {
           isOpen={cartCheckout}
           onClose={handleCloseCart}
           title="User Info"
-          confirm={{ text: "Send OTP", onConfirm: handleOtpsection }}
+          // confirm={{ text: "Send OTP", onConfirm: handleOtpsection }}
+           confirm={{ text: "Confirm", onConfirm: confirmOrder }}
         >
           <Input
             label="User Name"
@@ -225,7 +221,7 @@ function Header({ table }) {
           />
         </Dialog>
       )}
-      {otpdialog && (
+      {/* {otpdialog && (
         <Dialog
           isOpen={otpdialog}
           onClose={handlecloseOtpdialog}
@@ -238,7 +234,7 @@ function Header({ table }) {
           </div>
           <OtpComponent length={4} number={number} setotp={setOtp} />
         </Dialog>
-      )}
+      )} */}
     </div>
   );
 }
